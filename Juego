@@ -1,0 +1,203 @@
+#Hecho por: Odeth / Alias: La Papita Mafiosa
+
+def iniciar_juego():
+    while True:  # Bucle para mantener el juego en ejecución
+        print("Bienvenid@, ¿Deseas comenzar el juego?")
+        print("1. Si / 2. No")
+        Start_1 = "1"
+        Start_2 = "2"
+
+        Start = input()
+
+        if Start == Start_1:
+            print("\nDecidiste ir a explorar una cueva antigua con tu grupo de amigos: "
+                  "Mike, Karl, Jennifer y tú. Nadie tiene experiencia en la exploración de cuevas, "
+                  "pero la emoción llena el aire. Tras preparar el equipo, se acercan a la "
+                  "entrante oscura de la cueva, donde la luz se desvanece rápidamente.\n")
+            print("¿Deseas entrar en la cueva?")
+            print("1. Si / 2. No")
+            Entrar = input()
+            Entrar_1 = "1"
+            Entrar_2 = "2"
+
+            if Entrar == Entrar_1:
+                decision_ruido()
+            elif Entrar == Entrar_2:
+                print("\nTú y tus amigos sienten que es mejor dejar la aventura para otro día, "
+                      "pues la cueva emite una extraña sensación de inquietud.\n"
+                      "-Final 1: Mejor otro día-\n"
+                      "Gracias por jugar.")
+        elif Start == Start_2:
+            print("Hasta luego.")
+            break  # Salir del juego si elige no jugar
+def decision_ruido():
+    print("\nAl entrar en la cueva, el aire se torna fresco y húmedo. "
+          "Las paredes de piedra, cubiertas de humedad, gotean de manera irregular. "
+          "A medida que avanzan, empiezan a escuchar susurros provenientes de la oscuridad.\n"
+          "¿Qué haces?\n"
+          "1. Avanzas al sonido\n"
+          "2. Exploras un área cercana\n"
+          "3. Te quedas cerca de la entrada y sugieres ser cautelosos")    
+    Decision_Ruido1 = input()
+
+    if Decision_Ruido1 == "1":
+        avanza_sonido()
+    elif Decision_Ruido1 == "2":
+        explora_area()
+    elif Decision_Ruido1 == "3":
+        quedarte_entrada()
+def avanza_sonido():
+    print("\nDecidiste avanzar hacia el sonido. Con cada paso, el eco se amplifica. "
+          "De repente, un grito desgarrador de Mike corta el silencio. "
+          "Algo lo ha atrapado en las sombras...\n")
+    print("¿Qué deseas hacer?\n"
+          "1. Correr hacia el grito\n"
+          "2. Llamar a tus amigos\n"
+          "3. Retroceder lentamente")
+    Decision_Avanzar = input()
+
+    if Decision_Avanzar == "1":
+        correr_hacia_grito()
+    elif Decision_Avanzar == "2":
+        llamar_amigos()
+    elif Decision_Avanzar == "3":
+        retroceder_lentamente()
+def correr_hacia_grito():
+    print("\nCorres hacia el grito de Mike. Al llegar, te das cuenta de que ha desaparecido. "
+          "En su lugar, encuentras una puerta misteriosa cubierta de símbolos inquietantes. "
+          "Afuera, el aire se vuelve frío y una sombra oscura se cierne sobre ti...\n")
+    print("¿Qué decides hacer?\n"
+          "1. Abrir la puerta\n"
+          "2. Volver al grupo\n"
+          "3. Inspeccionar los símbolos")
+    Decision_Correr = input()
+
+    if Decision_Correr == "1":
+        abrir_puerta()
+    elif Decision_Correr == "2":
+        volver_grupo()
+    elif Decision_Correr == "3":
+        inspeccionar_simbolos()
+def abrir_puerta():
+    print("\nAbres la puerta y te adentras en una habitación oscura. "
+          "De repente, el suelo se abre bajo tus pies y caes en un abismo insondable, "
+          "mientras gritos resonantes llenan tu mente. "
+          "Sientes que las sombras te atrapan y el vacío te consume...\n"
+          "-Final 2: Caída sin fin, atrapado en un ciclo de desesperación y sombras-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def volver_grupo():
+    print("\nRegresas con el grupo, quienes están aterrados. Deciden salir "
+          "inmediatamente de la cueva, pero al girar, descubren que la entrada ha desaparecido. "
+          "Están atrapados en un laberinto de oscuridad, y algo acecha en la penumbra...\n"
+          "-Final 3: Atrapados en la cueva, condenados a vagar por la oscuridad sin esperanza de salida-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def inspeccionar_simbolos():
+    print("\nMientras inspeccionas los símbolos, un ruido ensordecedor resuena "
+          "en la cueva. De pronto, una sombra aparece, y te atrapa en un abrazo helado. "
+          "Tus gritos se ahogan en la oscuridad, y sientes que tu alma se fragmenta...\n"
+          "-Final 4: Capturado por la sombra, atrapado entre mundos y olvidado por el tiempo-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def explora_area():
+    print("\nDecides explorar un área cercana. Encuentras un sendero que parece llevar "
+          "más profundo en la cueva. A medida que avanzas, descubres un lugar iluminado "
+          "por cristales que emiten un tenue resplandor, pero su brillo es inquietante.\n")
+    print("¿Qué decides hacer?\n"
+          "1. Examinar los cristales\n"
+          "2. Llamar a tus amigos\n"
+          "3. Volver atrás")
+    Decision_Explorar = input()
+
+    if Decision_Explorar == "1":
+        examinar_cristales()
+    elif Decision_Explorar == "2":
+        llamar_amigos_exploracion()
+    elif Decision_Explorar == "3":
+        volver_atras()
+def examinar_cristales():
+    print("\nAl examinar los cristales, uno de ellos explota y te cubre en un polvo brillante. "
+          "De repente, tienes visiones inquietantes de lo que le sucedió a Mike, sus gritos resonando "
+          "en tu mente mientras figuras sombrías se acercan lentamente.\n")
+    print("¿Qué haces?\n"
+          "1. Tratas de interpretar las visiones\n"
+          "2. Te asustas y huyes\n"
+          "3. Llamas a tus amigos")
+    Decision_Cristales = input()
+
+    if Decision_Cristales == "1":
+        interpretar_visiones()
+    elif Decision_Cristales == "2":
+        huir_cristales()
+    elif Decision_Cristales == "3":
+        llamar_amigos_cristales()
+def interpretar_visiones():
+    print("\nMientras intentas descifrar las visiones, las imágenes de tus amigos atrapados "
+          "y gritos de angustia te invaden. De repente, el aire se vuelve denso y sientes "
+          "que la cueva comienza a colapsar sobre ti, atrapándote en un tormento eterno...\n"
+          "-Final 5: Perdido en la locura de tus visiones, encerrado en un ciclo de dolor-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def huir_cristales():
+    print("\nTe asustas y huyes, pero el polvo brillante parece seguirte. "
+          "Los cristales susurran tu nombre mientras la oscuridad te rodea, "
+          "y al girar una esquina, te encuentras con una criatura que te atrapa en sus garras frías...\n"
+          "-Final 6: Consumido por la oscuridad, tu destino sellado por tu miedo-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def llamar_amigos_cristales():
+    print("\nLlamas a tus amigos, pero sus ecos se desvanecen en el aire. "
+          "Mientras esperas, el polvo brillante se condensa en una figura oscura, "
+          "y sientes cómo la desesperación te atrapa...\n"
+          "-Final 7: Devorado por la sombra de tu propia impotencia, atrapado en un silencio eterno-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def llamar_amigos():
+    print("\nLlamas a tus amigos, pero el eco de tu voz se convierte en un susurro aterrador. "
+          "Mientras esperas, el aire se vuelve frío y la sombra oscura se acerca, "
+          "dejándote en la penumbra...\n"
+          "-Final 8: Atrapado por el silencio, tu destino se sella en la oscuridad-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def llamar_amigos_exploracion():
+    print("\nLlamas a tus amigos, pero el eco de tu voz se convierte en un susurro aterrador. "
+          "Mientras esperas, el aire se vuelve frío y la sombra oscura se acerca, "
+          "dejándote en la penumbra...\n"
+          "-Final 8: Atrapado por el silencio, tu destino se sella en la oscuridad-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def quedarte_entrada():
+    print("\nDecides quedarte cerca de la entrada, sugiriendo a tus amigos que sean cautelosos. "
+          "Sin embargo, uno a uno, comienzan a alejarse, ignorando tus advertencias. "
+          "A medida que la oscuridad se cierra, la sensación de angustia se apodera de ti. "
+          "Poco a poco, tus amigos desaparecen uno a uno, dejándote solo con tus temores...\n"
+          "-Final 9: La cueva se lleva a tus amigos, dejándote solo con la certeza de su trágico destino-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def retroceder_lentamente():
+    print("\nRetrocedes lentamente, pero las sombras parecen acercarse más. "
+          "De repente, sientes una mano helada en tu hombro. "
+          "Cuando te giras, descubres que no estás solo, y el terror se apodera de ti...\n"
+          "-Final 10: Capturado por la oscuridad, tu destino es desconocido-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def volver_atras():
+    print("\nDecides volver atrás, pero el camino se desvanece, "
+          "y te encuentras atrapado en un laberinto de sombras. "
+          "Tus amigos llaman, pero sus voces se convierten en ecos distorsionados que te atormentan...\n"
+          "-Final 11: Atrapado entre sombras y ecos, tu mente se quiebra lentamente-\n"
+          "Gracias por jugar.")
+    preguntar_volver()
+def preguntar_volver():
+    while True:
+        print("¿Quieres volver a jugar?")
+        print("1. Si / 2. No")
+        volver = input()
+        if volver == "1":
+            iniciar_juego()
+        elif volver == "2":
+            print("Hasta luego.")
+            break #Se corta el juego si decide no volver a jugar
+# Iniciar el juego
+iniciar_juego()
